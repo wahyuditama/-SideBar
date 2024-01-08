@@ -4,89 +4,204 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
+    <!-- Link -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontawesome-free-6.2.1@6.2.1/css/all.min.css" />
-    <style>
-      .nav-pills li a:hover {
-        background-color: blue;
-      }
-    </style>
-  </head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!-- End Link -->
+
+    <!-- Css -->
+
+    <style> 
+
+    .nav-link:hover {
+      background-color: blue;
+    }
+
+    .card-icon {
+      position: absolute;
+      z-index: 0;
+      top: 25px;
+      right: 4px;
+      opacity: 0.4;
+      font-size: 90px;
+      
+    }
+
+    </style>
+    <!-- End CSS -->
+  </head>
   <body>
     <div class="container-fluid">
-      <div class="row flex-nowrap">
-        <div class="bg-dark col-auto col-md-4 col-lg-3 min-vh-100 d-flex flex-column justify-content-between">
-          <div class="bg-dark p-2">
-            <a href="#" class="d-flex text-decoration-none align-item-center mt-1 text-white nav-link active">
-              <span class="fs-4 d-none d-sm-inline text-primary">SideBar</span>
-            </a>
-            <ul class="nav nav-pills flex-column mt-4">
-              <li class="nav-item py-2 py-sm-0 text-white">
-                <a href="#" class="nav-link text-white"
-                  ><i class="fs-2 fa-clipboard"></i><span class="fs-4 ms-3 d-none d-sm-inline">Dashboard</span>
-                </a>
-              </li>
-              <li class="nav-item py-2 py-sm-0 mt-4">
-                <a href="#" class="nav-link text-white"> <i class="fs-2 fa-table-list"></i><span class="fs-4 ms-3 d-none d-sm-inline">News</span> </a>
-              </li>
-              <li class="nav-item py-2 py-sm-0 mt-4">
-                <a href="#" class="nav-link text-white">
-                  <i class="fs-2 fa fa-table-list"></i><span class="fs-4 ms-3 d-none d-sm-inline">Top News</span>
-                </a>
-              </li>
-              <li class="nav-item py-2 py-sm-0 mt-4">
-                <a href="#" class="nav-link text-white">
-                  <i class="fs-2 fa fa-grid2"></i><span class="fs-4 ms-3 d-none d-sm-inline">Article</span>
-                </a>
-              </li>
-              <li class="nav-item py-2 py-sm-0 mt-4">
-                <a href="#" class="nav-link text-white">
-                  <i class="fs-2 fa fa-clipboard"></i><span class="fs-4 ms-3 d-none d-sm-inline">About</span>
-                </a>
-              </li>
-              <li class="nav-item py-2 py-sm-0 mt-4">
-                <a href="#" class="nav-link text-white">
-                  <i class="fs-2 fa fa-grid2"></i><span class="fs-4 ms-3 d-none d-sm-inline">Contact</span>
-                </a>
-              </li>
-            </ul>
+
+      <!-- nav -->
+    <nav class="navbar navbar-expand-lg bg-danger fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Lorem, ipsum.| <b>Lorem ipsum dolor sit amet.</b></a>
+       
+          <form class="d-flex ms-auto" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+          <!-- <div class="icon ml-4">
+            <h5>
+              <i class='bx bx-envelope m-2'></i>
+              <i class='bx bxs-bell-minus m-2' ></i>
+              <i class='bx bxs-right-arrow-circle m-2' ></i>
+            </h5>
+          </div> -->
+        </div>
+      </div>
+    </nav>
+    <!-- end nav -->
+
+    <!-- Vertical Nav -->
+    <div class="row no-gutters mt-5 " style="max-width: 100%;" >
+      <div class="col-md-2 bg-dark mt-2 p-3 " style="height: 870px;">
+        <ul class="nav flex-column ml-3 mb-5">
+          <li class="nav-item">
+            <a class="nav-link active text-white" href="#"><i class='bx bx-home me-2'></i>Home</a><hr class="border">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class='bx bxs-envelope me-2' ></i>Passengers</a><hr class="border">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class='bx bxs-contact me-2' ></i>Command</a><hr class="border">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class='bx bxs-user-badge me-2' ></i>Library</a><hr class="border">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class='bx bx-edit me-2' ></i>List of Contents</a><hr class="border">
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class='bx bx-spreadsheet me-2' ></i>bibliography</a><hr class="border">
+          </li>
+        </ul>
+      </div>
+      
+       <!-- End Vertical Nav -->
+      <div class="col-md-10 p-5 pt-3 " >
+        <h3><i class='bx bx-home me-2'></i>Home</h3><hr>
+        <div class="row text-dark fw-bold">
+          <div class="card bg-success m-5" style="width: 25rem;">
+            <div class="card-body">
+              <div class="card-icon ">
+                <i class='bx bx-user-circle'></i>
+              </div>
+              <h5 class="card-title">Card title</h5>
+              <div class="display-4 fw-bold">5.500.</div>
+              <p class="card-text text-justify" style="width: 15rem;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
           </div>
-          <div class="dropdown open p-3 mb-4">
-            <button
-              class="btn btn-secondary dropdown-toggle text-white"
-              type="button"
-              id="triggerId"
-              data-bs-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <i class="fa fa-user"></i><span class="m-2">User</span>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="triggerId">
-              <button class="dropdown-item" href="#">Action</button>
-              <button class="dropdown-item disabled" href="#">Disabled action</button>
+
+          <div class="card bg-danger m-5" style="width: 25rem;">
+            <div class="card-body">
+              <div class="card-icon ">
+                <i class='bx bx-user-circle'></i>
+              </div>
+              <h5 class="card-title">Card title</h5>
+              <div class="display-4 fw-bold">5.500.</div>
+              <p class="card-text text-justify" style="width: 15rem;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card bg-nuted m-5" style="width: 25rem;">
+            <div class="card-body">
+              <div class="card-icon ">
+                <i class='bx bx-user-circle'></i>
+              </div>
+              <h5 class="card-title">Card title</h5>
+              <div class="display-4 fw-bold">5.500.</div>
+              <p class="card-text text-justify" style="width: 15rem;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card bg-success m-5" style="width: 25rem;">
+            <div class="card-body">
+              <div class="card-icon ">
+                <i class='bx bx-user-circle'></i>
+              </div>
+              <h5 class="card-title">Card title</h5>
+              <div class="display-4 fw-bold">5.500.</div>
+              <p class="card-text text-justify" style="width: 15rem;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card bg-primary m-5" style="width: 25rem;">
+            <div class="card-body">
+              <div class="card-icon ">
+                <i class='bx bx-user-circle'></i>
+              </div>
+              <h5 class="card-title">Card title</h5>
+              <div class="display-4 fw-bold">5.500.</div>
+              <p class="card-text text-justify" style="width: 15rem;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card bg-warning m-5" style="width: 25rem;">
+            <div class="card-body">
+              <div class="card-icon ">
+                <i class='bx bx-user-circle'></i>
+              </div>
+              <h5 class="card-title">Card title</h5>
+              <div class="display-4 fw-bold">5.500.</div>
+              <p class="card-text text-justify" style="width: 15rem;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card bg-info m-5" style="width: 25rem;">
+            <div class="card-body">
+              <div class="card-icon ">
+                <i class='bx bx-user-circle'></i>
+              </div>
+              <h5 class="card-title">Card title</h5>
+              <div class="display-4 fw-bold">5.500.</div>
+              <p class="card-text text-justify" style="width: 15rem;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card bg-secondary m-5" style="width: 25rem;">
+            <div class="card-body">
+              <div class="card-icon ">
+                <i class='bx bx-user-circle'></i>
+              </div>
+              <h5 class="card-title">Card title</h5>
+              <div class="display-4 fw-bold">5.500.</div>
+              <p class="card-text text-justify" style="width: 15rem;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
         </div>
-        <!-- Jumbotron -->
-        <div class="p-3">
-          <h2>Area Jumbotron</h2>
+       
         </div>
-        <!-- end Jumbotron -->
       </div>
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/fontawesome-free-6.2.1@6.2.1/js/all.min.js"></script>
+    <!--  end nav -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
   </body>
 </html>
